@@ -37,11 +37,7 @@ class RecintosZoo {
                 recinto.podeAdicionarAnimal(animal, quantidade)
             )
             .sort((a, b) => a.numero - b.numero)
-<<<<<<< HEAD
-            .map(recinto => { 
-=======
             .map(recinto => {
->>>>>>> cc4ba380dac19f94341b9a3d4807d4edea940399
                 const tamanhoOcupado = recinto.animais.reduce((total, a) => total + a.animal.tamanho * a.quantidade, 0);
                 const espacoRestante = recinto.tamanhoTotal - tamanhoOcupado - (animal.tamanho * quantidade);
 
@@ -51,11 +47,6 @@ class RecintosZoo {
 
                 return `Recinto ${recinto.numero} (espaço livre: ${espacoAjustado} total: ${recinto.tamanhoTotal})`;
             });
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> cc4ba380dac19f94341b9a3d4807d4edea940399
         if (recintosViaveis.length > 0) {
             return { erro: false, recintosViaveis };
         } else {
